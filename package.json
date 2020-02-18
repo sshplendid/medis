@@ -11,6 +11,8 @@
     "build": "rm -rf dist && webpack",
     "watch": "WEBPACK_WATCH=true npm run build",
     "start": "electron .",
+    "package:mac": "electron-packager . medis --platform=darwin --overwrite --out dist2/ --icon resources/icns/MyIcon.icns",
+    "package:win": "electron-packager . medis --platform=win32 --overwrite --out dist2/ --icon resources/icns/Icon1024.png",
     "pack": "NODE_ENV=production npm run build && node bin/pack.js"
   },
   "repository": {
